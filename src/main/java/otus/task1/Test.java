@@ -9,7 +9,7 @@ public class Test {
 
     public void setQuestions(Question[] questions) {
         this.questions = questions;
-        String line = "";
+        String line;
         String file = "src/main/resources/questions.csv";
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             for (Question question : this.questions) {
@@ -46,5 +46,6 @@ public class Test {
             ++counter;
         }
         System.out.println("Test is over. Number of correct answers: " + points);
+        scanner.close();
     }
 }
