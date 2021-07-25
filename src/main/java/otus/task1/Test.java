@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class Test {
     private Question[] questions;
 
-    public void setQuestions(Question[] questions) {
-
+    public Test(Question[] questions) {
         this.questions = questions;
         String line;
         String file = "src/main/resources/questions.csv";

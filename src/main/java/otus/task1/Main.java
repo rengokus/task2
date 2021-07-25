@@ -1,16 +1,16 @@
 package otus.task1;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
 
 
     public static void main(String[] args) throws Exception {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
-        Test test = context.getBean("testBean", Test.class);
+        Test test = context.getBean(Test.class);
         test.startTest();
         context.close();
     }
